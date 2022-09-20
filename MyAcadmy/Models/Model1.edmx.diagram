@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="be4207791e2a4738a348eaa9dc76c64e" Name="Diagram1">
+        <EntityTypeShape EntityType="courseModel.cour" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseModel.data_of_student" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseModel.Department" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseModel.trainer" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="courseModel.FK__data_of_s__id_co__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="courseModel.FK_cours_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="courseModel.FK_cours_trainer" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="courseModel.C__MigrationHistory" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="courseModel.AspNetRole" Width="1.5" PointX="8.375" PointY="4" />
+        <EntityTypeShape EntityType="courseModel.AspNetUserClaim" Width="1.5" PointX="7.625" PointY="6.5" />
+        <EntityTypeShape EntityType="courseModel.AspNetUserLogin" Width="1.5" PointX="7.625" PointY="12" />
+        <EntityTypeShape EntityType="courseModel.AspNetUserRole" Width="1.5" PointX="10.625" PointY="7.875" />
+        <EntityTypeShape EntityType="courseModel.AspNetUser" Width="1.5" PointX="5.375" PointY="6.875" />
+        <AssociationConnector Association="courseModel.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" />
+        <AssociationConnector Association="courseModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="courseModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="courseModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="courseModel.FK_data_of_student_AspNetUsers" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

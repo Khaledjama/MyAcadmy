@@ -1,0 +1,65 @@
+﻿@model MyAcadmy.Models.cour
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>cour</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Course Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datestart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datestart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imag)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.imag)" height="100" width="100" />
+        </dd>
+
+        <dt>
+
+        <dt>
+            @Html.DisplayName("Doctor : ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainer.name)
+        </dd>
+        <dt>
+            @Html.DisplayName("Conten Course")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contentcourse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+   
+    <a href="~/cours/Apply/@Model.id">
+        Apply for Courses
+    </a>
+
+    <!-- The Modal -->
+
+
+</p>

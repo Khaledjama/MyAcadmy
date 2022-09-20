@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MyAcadmy.Models.data_of_student>
+
+@{
+    ViewBag.Title = "mycourses";
+}
+<div class="container">
+    <br />
+    <hr style="width:50%;" />
+    <div>
+        <h2 style="text-align:center;"> Wellcome in our Acadmy</h2>
+    </div>
+    <hr style="width:50%;" />
+    <b>you are selected this courses to learn it </b>
+</div>
+   
+
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayName("Course Name")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cour.contentcourse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cour.imag)
+        </th>
+        <th>
+            @Html.DisplayName("Teacher Name")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cour.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cour.contentcourse)
+        </td>
+        <td>
+            <img src="@Url.Content(item.cour.imag)" width="80" height="70" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cour.trainer.name)
+        </td>
+       
+        <td>
+            @Html.ActionLink("unfollow", "unfollow", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

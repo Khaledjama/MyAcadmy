@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MyAcadmy.Models.cour>
+
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datestart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contentcourse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainer.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datestart)
+        </td>
+        <td>
+            <img src="@Url.Content(item.imag)" width="70" height="60" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contentcourse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainer.name)
+        </td>
+        <td>
+            <a href="~/cours/Edit/@item.id">Edite</a>|
+            <a href="~/cours/Details/@item.id">Details</a>|
+            <a href="~/cours/Delete/@item.id">Delete</a>
+            
+        </td>
+    </tr>
+}
+
+</table>

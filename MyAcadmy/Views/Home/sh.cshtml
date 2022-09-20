@@ -1,0 +1,132 @@
+﻿@model IEnumerable<MyAcadmy.Models.cour>
+
+@{
+    ViewBag.Title = "sh";
+}
+
+
+<div class="container">
+    <br />
+    <hr style="width:50%;" />
+
+    <hr style="width:50%;" />
+    <div>
+        <div>
+
+          
+            <div class="col-lg-12">
+                @foreach (var item in Model.Where(s => s.Department.name == "Language" || s.Department.name == "Tiqnique" || s.Department.name== "Diploma"))
+                {
+
+                    <div class="card col-lg-4">
+                        <br /><br />
+                        <img class="card-img-top" src="@Url.Content(item.imag)" alt="Card image" style="width:250px ; height:200px;">
+                        <div class="card-body">
+                            <h4 class="card-title">Course Name : @item.name</h4>
+                            <p class="card-text">Course Start at : @item.datestart</p>
+                            <p class="card-text"> Doctor  : @item.trainer.name</p>
+                            <a href="~/cours/Details/@item.id" class="btn btn-primary stretched-link">See Course</a>
+                        </div>
+                    </div>
+
+                }
+            </div>
+            <br />
+        </div>
+    </div>
+
+
+    @*<div class="col-lg-12">
+        
+        @foreach (var item in Model.Where(s => s.Department.name == "Tiqnique" || s.Department.name== "Tiqnique"))
+        {
+
+            <div class="card col-lg-4">
+                <img class="card-img-top" src="@Url.Content(item.imag)" alt="Card image" style="width:250px ; height:200px;">
+                <div class="card-body">
+                    <h4 class="card-title">Course Name : @item.name</h4>
+                    <p class="card-text">Course Start at : @item.datestart</p>
+                    <p class="card-text"> Doctor  : @item.trainer.name</p>
+                    <a href="~/cours/Details/@item.id" class="btn btn-primary stretched-link">See Profile</a>
+                </div>
+            </div>
+
+        }
+    </div>
+    <div class="col-lg-12">
+       
+        <div class="col-lg-12">
+            @foreach (var item in Model.Where(s => s.Department.name == "Diploma"))
+            {
+
+                <div class="card col-lg-4" style="height:450px;">
+                    <img class="card-img-top" src="@Url.Content(item.imag)" alt="Card image" style="width:250px ; height:200px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Course Name : @item.name</h4>
+                        <p class="card-text">Course Start at : @item.datestart</p>
+                        <p class="card-text"> Doctor  : @item.trainer.name</p>
+                        <a href="~/cours/Details/@item.id" class="btn btn-primary stretched-link">See Profile</a>
+
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>*@
+</div>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datestart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contentcourse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.trainer.name)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datestart)
+            </td>
+            <td>
+                <img src="@Url.Content(item.imag)" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contentcourse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trainer.name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+
+    </table>*@
